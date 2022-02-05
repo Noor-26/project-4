@@ -43,3 +43,20 @@ function picnicBudget (members){
         return budget;
     }
 }
+
+// problem - 4 : oddFriend
+
+function oddFriend(arr) {
+    var isOdd =[];
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        if(element.length % 2 != 0){
+            isOdd.push(element);
+            return isOdd;
+        }
+    }
+}
+
+
+
+
