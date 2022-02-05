@@ -1,15 +1,27 @@
 // problem - 1 : ana to bori
 function anaToVori (ana){ 
+    if(ana <= 0 ){
+        var massage = "you don't have proper ana"
+        return massage;
+    }
+    
     let vori = ana / 16;
     return vori;
 }
 
+
 // problem -2 : pandaCost
+
 function pandaCost ( isSingara , isSomuca , isJilabi){
     const singara = 7;
     const somuca = 10;
     const jilabi = 15;
-    
+
+    if (isSingara < 0 || isSomuca < 0 || isJilabi < 0 ) {
+        var massage = "please choose the value of your item greater than 0"
+        return massage;
+    }
+
     let totalSingara = isSingara * singara;
     let totalSomuca = isSomuca * somuca;
     let totalJilabi = isJilabi * jilabi;
@@ -19,11 +31,17 @@ function pandaCost ( isSingara , isSomuca , isJilabi){
 
 }
 
+
 // problem - 3 : picnicBudget
 
 function picnicBudget (members){
    let budget = 0;
-    if(members <= 100){
+   if (members <= 0) {
+       var massage = "No members included so the picnic budget is 0"
+       return massage;
+   }
+
+    else if(members <= 100){
     budget = members * 5000;
     return budget;
     }
@@ -46,16 +64,27 @@ function picnicBudget (members){
 
 // problem - 4 : oddFriend
 
-function oddFriend(arr) {
+function oddFriend(names) {
     var isOdd =[];
-    for (let i = 0; i < arr.length; i++) {
-        const element = arr[i];
+    if (names <= 0 || names > 0 ){
+       var massage =  "Numbers not allowed"
+       return massage;
+    }
+
+    for (let i = 0; i < names.length; i++) {
+        const element = names[i];
         if(element.length % 2 != 0){
             isOdd.push(element);
             return isOdd;
         }
+        else{
+            var massage = "No odd Names found"
+            return massage;
+        }
     }
 }
+
+
 
 
 
