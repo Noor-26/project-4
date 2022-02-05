@@ -43,5 +43,3 @@ function picnicBudget (members){
         return budget;
     }
 }
-const output = picnicBudget(120);
-console.log(output);
